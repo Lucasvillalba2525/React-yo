@@ -4,11 +4,13 @@ class RickAndMortyService {
 
     async getAllCharacters(){
         const response = await fetch(API_RM.CHARACTERS());
-        return response.json();
+        let result = response.json();
+        return result;
     }
     async getCharacterById(id){
         const response = await fetch(API_RM.CHARACTER_BY_ID(id));
-        return response.json();
+        let result = response.json(); 
+        return result;
     }
 }
 
